@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   flask-app:
-    build: ./python-flask-app
+    build: ../python-flask-app
     container_name: flask-app
     ports:
       - "5000:5000"
@@ -15,7 +15,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ../monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     networks:
@@ -23,3 +23,4 @@ services:
 
 networks:
   aiops-net:
+    driver: bridge
