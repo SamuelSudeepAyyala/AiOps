@@ -1,4 +1,4 @@
-# 🚀 AIOps Engineering Lab
+# 🚀 AIOps Engineering Project
 
 This repository documents my journey building a **modular, real-time AIOps platform** integrating **DevOps, observability, and AI**.
 
