@@ -20,6 +20,17 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
     networks:
       - aiops-net
+  
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - aiops-net
+
 
 networks:
   aiops-net:
