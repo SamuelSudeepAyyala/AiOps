@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+pip-wheel-metadata/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+*.out
+*.err
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+*.seed
+*.bak
+*.swp
+docker-compose.override.yml
+docker-compose*.bak
+docker-compose*.tmp
+
+# Loki and Promtail Volumes
+loki-data/
+loki-wal/
+wal/
+tmp/
+cache/
+index/
+boltdb-cache/
+logs/
+
+# Provisioned Dashboards/Temp
+grafana/data/
+grafana/provisioning/dashboards/*.tmp.json
+grafana/provisioning/datasources/*.tmp.json

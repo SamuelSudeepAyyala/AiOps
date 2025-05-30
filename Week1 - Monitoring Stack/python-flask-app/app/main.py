@@ -1,5 +1,16 @@
 from flask import Flask, request
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+import logging
+
+# Logging setup
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("/var/log/app.log")
+    ]
+)
 
 app = Flask(__name__)
 
@@ -34,6 +45,4 @@ def data():
     return {"data": [1, 2, 3]}, 200
 
 if __name__ == '__main__':
-    import logging
-    logging.basicConfig(level=logging.INFO)
     app.run(host='0.0.0.0', port=5000)
