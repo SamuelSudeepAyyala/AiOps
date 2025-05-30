@@ -1,41 +1,48 @@
-# 🚀 AIOps Engineering Lab
+# Week1 - Monitoring Stack
 
-This repository documents my journey building a **modular, real-time AIOps platform** integrating **DevOps, observability, and AI**.
+## Overview
 
-## 📚 Overview
+This module contains the initial observability stack setup using a Flask application, Prometheus for metrics, and Docker Compose for orchestration.
 
-This lab-based project is divided into weekly modules to cover core concepts of AIOps:
-- Monitoring Stack (logs, metrics, dashboards)
-- Log anomaly detection & classification
-- AI-enhanced CI/CD workflows
-- Kubernetes-based deployment automation
-- Auto-remediation via ML/NLP models
+## Components
 
----
+- `flask-app/` : Python Flask application exposing a `/metrics` endpoint and request logging.
+- `prometheus/` : Prometheus configuration to scrape the Flask app.
+- `docker-compose.yml` : Brings up Flask app and Prometheus in containers.
 
-## 📆 Weekly Modules
+## Setup Instructions
 
-| Week | Module | Description |
-|------|--------|-------------|
-| 1️⃣ | [Week1 - Monitoring Stack](./Week1 - Monitoring Stack) | Prometheus + Grafana + Loki + Flask app |
-| 2️⃣ | (Coming soon) Log Analyzer | Train and deploy AI models for log classification |
-| 3️⃣ | (Planned) CI/CD Automation | GitHub Actions with AI-triggered decision points |
-| 4️⃣ | (Planned) Kubernetes Infra | Helm-based K8s deployment of AIOps pipeline |
+### 1. Clone the Repository
+ 
+```bash
+git clone https://github.com/<your-username>/AiOps.git
+cd "AiOps/Week1 - Monitoring Stack"
+```
 
----
-
-## 🧠 Stack Highlights
-
-- **Python Flask** microservices
-- **Prometheus, Grafana, Loki** for observability
-- **Docker Compose** orchestration
-- **scikit-learn**, **Hugging Face**, **OpenAI** for AI
-- Optional: **Kubernetes**, **Azure DevOps**, **Slack Bots**
-
----
-
-## 🛠️ How to Run (Week 1)
+### 2. Build and Run
 
 ```bash
-cd week1-observability/docker
 docker-compose up --build
+```
+
+### 3. Access Endpoints
+
+ - Flask App Health: http://localhost:5000/health
+
+ - Flask App Metrics: http://localhost:5000/metrics
+
+ - Prometheus UI: http://localhost:9090
+
+ ### 4. Verify Prometheus Scraping
+
+ - Navigate to Status > Targets in Prometheus UI
+
+ - Ensure flask-app:5000 target shows as UP
+
+
+## Status
+
+✅ Completed setup of Flask app with Prometheus metrics\
+✅ Configured Prometheus to scrape metrics from Flask app\
+✅ Dockerized both services\
+✅ Verified metrics in Prometheus UI
