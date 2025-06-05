@@ -21,6 +21,10 @@ def log_and_count():
     REQUEST_COUNT.labels(request.method, request.path).inc()
     app.logger.info(f"Request: {request.method} {request.path}")
     
+@app.route('/')
+def home():
+    return 'Hello Samuel! From AiOps homepage', 200
+    
 @app.route('/health')
 def health():
     return 'OK', 200
