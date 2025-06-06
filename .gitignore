@@ -12,6 +12,7 @@ env/
 ENV/
 .venv/
 pip-wheel-metadata/
+.env
 
 # VSCode and IDEs
 .vscode/

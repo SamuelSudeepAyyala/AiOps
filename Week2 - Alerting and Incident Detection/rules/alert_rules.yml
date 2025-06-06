@@ -1,11 +1,60 @@
 groups:
-  - name: flask-app-rules
+  - name: flask-app-alerts
     rules:
       - alert: HighRequestRate
         expr: rate(request_count_total[1m]) > 1
-        for: 10s
+        for: 30s
         labels:
           severity: warning
         annotations:
-          summary: "High request rate on Flask app"
-          description: "The request rate has exceeded 1 rps for the past minute."
+          summary: "High Request Rate"
+          description: "More than 1 request/sec is being served by Flask for 30 seconds."
+
+      - alert: HighRequestCountCreated
+        expr: rate(request_count_created[1m]) > 1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Request Creation Rate"
+          description: "More than 1 new request/sec created for 30 seconds."
+
+  - name: system-resource-alerts
+    rules:
+      - alert: HighMemoryUsage
+        expr: process_resident_memory_bytes > 100000000
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Memory Usage"
+          description: "Memory usage of Flask process exceeded 100MB."
+
+      - alert: HighCPUUsage
+        expr: rate(process_cpu_seconds_total[1m]) > 0.8
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High CPU Usage"
+          description: "CPU usage of the Flask process exceeded 80% for 1 minute."
+
+  - name: prometheus-health-alerts
+    rules:
+      - alert: PrometheusJobDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Prometheus target down"
+          description: "One or more Prometheus scrape targets are down."
+
+      - alert: LongScrapeDuration
+        expr: scrape_duration_seconds > 1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Scrape duration too long"
+          description: "Prometheus scrape duration exceeded 1s."

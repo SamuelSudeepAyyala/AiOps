@@ -2,10 +2,15 @@ global:
   resolve_timeout: 5m
 
 route:
-  receiver: 'gmail-notifications'
+  group_by: ['alertname']
   group_wait: 10s
-  group_interval: 30s
+  group_interval: 1m
   repeat_interval: 1h
+  receiver: 'gmail-notifications'
+  routes:
+    - match:
+        severity: critical
+      receiver: 'gmail-notifications' 
 
 receivers:
   - name: 'gmail-notifications'

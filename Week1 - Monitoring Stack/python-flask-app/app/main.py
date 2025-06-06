@@ -1,4 +1,5 @@
-from flask import Flask, request
+import time
+from flask import Flask, jsonify, request
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
 import logging
 
@@ -28,6 +29,11 @@ def home():
 @app.route('/health')
 def health():
     return 'OK', 200
+
+@app.route('/simulate-high-latency')
+def high_latency():
+    time.sleep(1)
+    return jsonify({"status": "simulated high latency"}), 200
 
 @app.route('/metrics')
 def metrics():
