@@ -18,12 +18,12 @@ route:
 receivers:
   - name: 'gmail-notifications'
     email_configs:
-      - to: 'samuelsudeep9@gmail.com'
-        from: 'ayyalasamuelsudeep@gmail.com'
+      - to: ${EMAIL_RECEIVER}Add commentMore actions
+        from: ${EMAIL_USERNAME}
         smarthost: 'smtp.gmail.com:587'
-        auth_username: 'ayyalasamuelsudeep@gmail.com'
-        auth_identity: 'ayyalasamuelsudeep@gmail.com'
-        auth_password: 'chda nvfz esly srol'
+        auth_username: ${EMAIL_USERNAME}
+        auth_identity: ${EMAIL_USERNAME}
+        auth_password: ${EMAIL_PASSWORD}
         require_tls: true
 
   - name: 'webhook-notifications'
