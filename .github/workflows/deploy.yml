@@ -33,4 +33,4 @@ jobs:
 
       - name: Run Docker Compose
         run: |
-          docker-compose -f "Week2 - Alerting and Incident Detection/docker-compose.yml" up -d --build
+          docker compose -f "Week2 - Alerting and Incident Detection/docker-compose.yml" up -d --build
