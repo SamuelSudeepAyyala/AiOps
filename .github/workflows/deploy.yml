@@ -20,6 +20,10 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name : Folder check
+        run : |
+          ls 
+      
       - name: Generate Alertmanager Config
         run: |
           python "Week2 - Alerting and Incident Detection/generate_config.py"
