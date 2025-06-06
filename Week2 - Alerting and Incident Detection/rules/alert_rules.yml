@@ -58,3 +58,52 @@ groups:
         annotations:
           summary: "Scrape duration too long"
           description: "Prometheus scrape duration exceeded 1s."
+          
+  - name: flask-app-metrics-alerts
+    rules:
+
+      - alert: HighRequestRate
+        expr: rate(request_count_total[1m]) > 1
+        for: 15s
+        labels:
+          severity: warning
+        annotations:
+          summary: "High request rate detected"
+          description: "The Flask app is receiving more than 1 request/sec for the past minute."
+
+      - alert: ZeroRequestRate
+        expr: rate(request_count_total[1m]) == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "No traffic to Flask App"
+          description: "Flask app has received no requests for the past minute."
+
+      - alert: HighRequestLatency
+        expr: flask_http_request_duration_seconds_sum / flask_http_request_duration_seconds_count > 0.8
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "High request latency"
+          description: "Flask app response time is averaging more than 0.8s over 30s."
+
+      - alert: SpikeInLatency
+        expr: increase(flask_http_request_duration_seconds_sum[1m]) > 5
+        for: 15s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latency spike observed"
+          description: "Total latency increased significantly in the last minute."
+
+      - alert: ErrorStatusRate
+        expr: rate(flask_http_request_errors_total[1m]) > 0.1
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "HTTP error rate is high"
+          description: "More than 10% of requests are returning error responses."
+

@@ -48,6 +48,20 @@ services:
       - prometheus
     networks:
       - aiops-net
+  
+  webhook:
+    container_name: webhook 
+    build:
+      context: ./webhook
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./webhook:/app
+    working_dir: /app
+    command: python webhook_receiver.py
+    networks:
+      - aiops-net
+
 
 volumes:
   logs:

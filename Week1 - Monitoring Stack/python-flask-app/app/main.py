@@ -1,6 +1,7 @@
 import time
 from flask import Flask, jsonify, request
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+from prometheus_flask_exporter import PrometheusMetrics
 import logging
 
 # Logging setup
@@ -14,6 +15,7 @@ logging.basicConfig(
 )
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 REQUEST_COUNT = Counter('request_count', 'App Request Count', ['method', 'endpoint'])
 

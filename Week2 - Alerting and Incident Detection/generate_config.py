@@ -1,7 +1,7 @@
 import os
 
-template_path = "Week2 - Alerting and Incident Detection/alertmanager/config.yml"
-output_path = "Week2 - Alerting and Incident Detection/alertmanager/config.yml"
+template_path = "./alertmanager/config.yml"
+output_path = "./alertmanager/config.yml"
 
 with open(template_path, "r") as f:
     config = f.read()
