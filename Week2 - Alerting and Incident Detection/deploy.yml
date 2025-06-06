@@ -1,0 +1,29 @@
+name: Local Week 2 Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Generate Alertmanager Config
+        run: |
+          python "Week2 - Alerting and Incident Detection/generate_config.py"
+
+      - name: Run Docker Compose
+        run: |
+          docker-compose -f "Week2 - Alerting and Incident Detection/docker-compose.yml" up -d --build
