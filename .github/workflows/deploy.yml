@@ -1,4 +1,4 @@
-name: Local Week 2 Deploy
+name: Alert Manager Configurations
 
 on:
   workflow_dispatch:
