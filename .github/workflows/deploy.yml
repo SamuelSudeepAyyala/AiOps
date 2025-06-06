@@ -1,6 +1,9 @@
 name: Alert Manager Configurations
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:

@@ -1,5 +1,7 @@
 import os
 
+print("Current working directory:", os.getcwd())
+
 template_path = "./alertmanager/config.yml"
 output_path = "./alertmanager/config.yml"
 
