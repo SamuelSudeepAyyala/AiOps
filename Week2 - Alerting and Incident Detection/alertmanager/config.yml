@@ -18,7 +18,7 @@ route:
 receivers:
   - name: 'gmail-notifications'
     email_configs:
-      - to: ${EMAIL_RECEIVER}Add commentMore actions
+      - to: ${EMAIL_RECEIVER}
         from: ${EMAIL_USERNAME}
         smarthost: 'smtp.gmail.com:587'
         auth_username: ${EMAIL_USERNAME}

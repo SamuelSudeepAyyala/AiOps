@@ -5,8 +5,8 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def alert():
     alert_data = request.json
-    print("🚨 Webhook Alert Received:")
-    print(alert_data)
+    app.logger.info("🚨 Webhook Alert Received:")
+    app.logger.info(alert_data)
     return jsonify({"status": "received"}), 200
 
 if __name__ == '__main__':
