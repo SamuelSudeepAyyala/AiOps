@@ -1,13 +1,10 @@
 name: Validate Week 2 Stack
 
 on:
-  push:
-    paths:
-      - 'Week2 - Alerting and Incident Detection/**'
-  pull_request:
-    paths:
-      - 'Week2 - Alerting and Incident Detection/**'
-  workflow_dispatch:
+    push:
+      branches:
+        - master
+    workflow_dispatch:
 
 jobs:
   validate:
