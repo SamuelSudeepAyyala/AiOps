@@ -32,6 +32,12 @@ jobs:
           pip install yamllint
           yamllint -c .yamllint.yml "Week2 - Alerting and Incident Detection"
 
+      - name: ⬇️ Download Prometheus (for promtool)
+        run: |
+          wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
+          tar xvf prometheus-2.52.0.linux-amd64.tar.gz
+          sudo mv prometheus-2.52.0.linux-amd64/promtool /usr/local/bin/
+          promtool --version
 
       - name: Prometheus Config Validation
         run: |
