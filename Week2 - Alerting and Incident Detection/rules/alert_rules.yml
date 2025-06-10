@@ -58,7 +58,7 @@ groups:
         annotations:
           summary: "Scrape duration too long"
           description: "Prometheus scrape duration exceeded 1s."
- 
+
   - name: flask-app-metrics-alerts
     rules:
 
