@@ -28,10 +28,10 @@ jobs:
           docker compose -f "Week2 - Alerting and Incident Detection/docker-compose.yml" config
 
       - name: YAML Linting
-        uses: ibiqlik/action-yamllint@v3
-        with:
-          config_file: .yamllint.yml
-          file_or_dir: "Week2 - Alerting and Incident Detection"
+        run: |
+          pip install yamllint
+          yamllint -c .yamllint.yml "Week2 - Alerting and Incident Detection"
+
 
       - name: Prometheus Config Validation
         run: |
