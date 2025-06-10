@@ -1,0 +1,44 @@
+name: Validate Week 2 Stack
+
+on:
+  push:
+    paths:
+      - 'Week2 - Alerting and Incident Detection/**'
+  pull_request:
+    paths:
+      - 'Week2 - Alerting and Incident Detection/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Validate Python Syntax (Flask & Webhook)
+        run: |
+          python -m py_compile "Week2 - Alerting and Incident Detection"/**/*.py
+
+      - name: Validate Docker Compose File
+        run: |
+          docker compose -f "Week2 - Alerting and Incident Detection/docker-compose.yml" config
+
+      - name: YAML Linting
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: .yamllint.yml
+          file_or_dir: "Week2 - Alerting and Incident Detection"
+
+      - name: Prometheus Config Validation
+        run: |
+          promtool check config "Week2 - Alerting and Incident Detection/prometheus/prometheus.yml"
+
+      - name: Alert Rules Validation
+        run: |
+          promtool check rules "Week2 - Alerting and Incident Detection/rules/alert_rules.yml"
