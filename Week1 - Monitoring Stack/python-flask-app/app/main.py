@@ -1,6 +1,6 @@
 import time
 from flask import Flask, jsonify, request
-from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
 from prometheus_flask_exporter import PrometheusMetrics
 import logging
 
@@ -19,11 +19,24 @@ metrics = PrometheusMetrics(app)
 
 REQUEST_COUNT = Counter('request_count', 'App Request Count', ['method', 'endpoint'])
 
+REQUEST_LATENCY = Histogram('flask_request_latency_seconds', 'Latency of HTTP requests', ['endpoint'])
+
 @app.before_request
 def log_and_count():
     REQUEST_COUNT.labels(request.method, request.path).inc()
     app.logger.info(f"Request: {request.method} {request.path}")
-    
+
+@app.before_request
+def start_timer():
+    request.start_time = time.time()
+
+@app.after_request
+def record_latency(response):
+    if hasattr(request, 'start_time'):
+        resp_time = time.time() - request.start_time
+        REQUEST_LATENCY.labels(request.path).observe(resp_time)
+    return response
+
 @app.route('/')
 def home():
     return 'Hello Samuel! From AiOps homepage', 200

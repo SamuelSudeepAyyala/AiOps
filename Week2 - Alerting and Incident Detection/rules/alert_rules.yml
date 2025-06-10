@@ -106,15 +106,13 @@ groups:
         annotations:
           summary: "HTTP error rate is high"
           description: "More than 10% of requests are returning error responses."
-  
+
   - name: loki-log-rules
     rules:
-      - alert: HighErrorRateInLogs
-        expr: |
-          sum(rate({container="flask-app"} |= "ERROR" [1m])) > 0
-        for: 30s
+      - alert: HighRequestLatency
+        expr: flask_request_latency_seconds_sum / flask_request_latency_seconds_count > 0.6
+        for: 1m
         labels:
           severity: warning
         annotations:
-          summary: "High error rate in logs"
-          description: "More than 0 errors per second in the last minute"
+          summary: "High Request Latency"
