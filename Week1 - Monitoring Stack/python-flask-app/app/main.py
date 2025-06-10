@@ -56,5 +56,10 @@ def data():
     app.logger.info("Data requested")
     return {"data": [1, 2, 3]}, 200
 
+@app.route('/log-error')
+def log_error():
+    app.logger.error("Simulated ERROR log for Loki alerting")
+    return jsonify({"status": "logged error"}), 200
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

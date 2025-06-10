@@ -46,13 +46,14 @@ services:
       - ./grafana/provisioning:/etc/grafana/provisioning
     depends_on:
       - prometheus
+      - loki
     networks:
       - aiops-net
-  
+
   webhook:
-    container_name: webhook 
     build:
       context: ./webhook
+    container_name: webhook
     ports:
       - "9000:9000"
     volumes:
@@ -61,10 +62,34 @@ services:
     command: python webhook_receiver.py
     networks:
       - aiops-net
+  
+  loki:
+    image: grafana/loki:2.8.2
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki-data:/loki
+      - ../Week1 - Monitoring Stack/loki/loki-config.yml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - aiops-net
 
+  promtail:
+    image: grafana/promtail:2.8.2
+    container_name: promtail
+    volumes:
+      - ../Week1 - Monitoring Stack/loki/promtail-config.yml:/etc/promtail/promtail-config.yml
+      - logs:/var/log
+    command: -config.file=/etc/promtail/promtail-config.yml
+    depends_on:
+      - loki
+    networks:
+      - aiops-net
 
 volumes:
   logs:
+  loki-wal:
 
 networks:
   aiops-net:
