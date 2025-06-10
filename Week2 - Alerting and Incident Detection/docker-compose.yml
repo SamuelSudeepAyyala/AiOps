@@ -62,7 +62,7 @@ services:
     command: python webhook_receiver.py
     networks:
       - aiops-net
-  
+
   loki:
     image: grafana/loki:2.8.2
     container_name: loki
