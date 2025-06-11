@@ -45,4 +45,4 @@ jobs:
 
       - name: Alert Rules Validation
         run: |
-          promtool check rules "Week2 - Alerting and Incident Detection/rules/alert_rules.yml"
+          promtool check rules "Week2 - Alerting and Incident Detection/prometheus/rules/alert_rules.yml"
