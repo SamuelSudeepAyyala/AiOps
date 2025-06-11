@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
-import logging 
+import logging
+from datetime import datetime
 
 app = Flask(__name__)
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="alerts_log.txt", level=logging.INFO, format="%(asctime)s - %(message)s")
+
 
 @app.route('/', methods=['POST'])
 def alert():
