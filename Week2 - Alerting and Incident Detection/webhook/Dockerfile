@@ -2,10 +2,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY webhook_receiver.py .
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install flask
-
-EXPOSE 9000
+COPY . .
 
 CMD ["python", "webhook_receiver.py"]

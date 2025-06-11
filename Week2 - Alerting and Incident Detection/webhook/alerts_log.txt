@@ -18,3 +18,923 @@
 2025-06-11 00:33:31,459 - 🚨 Webhook Alert Received:
 {'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T00:32:38.37Z'}
 2025-06-11 00:33:31,461 - 172.18.0.5 - - [11/Jun/2025 00:33:31] "POST / HTTP/1.1" 200 -
+2025-06-11 06:48:54,021 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.3:9000
+2025-06-11 06:48:54,022 - [33mPress CTRL+C to quit[0m
+2025-06-11 06:51:56,338 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 06:51:56,339 - [33mPress CTRL+C to quit[0m
+2025-06-11 06:53:07,270 - 172.18.0.1 - - [11/Jun/2025 06:53:07] "POST / HTTP/1.1" 200 -
+2025-06-11 06:54:37,692 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T06:53:38.37Z'}
+2025-06-11 06:54:37,693 - 172.18.0.2 - - [11/Jun/2025 06:54:37] "POST / HTTP/1.1" 200 -
+2025-06-11 06:55:28,625 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:54:29.419Z'}
+2025-06-11 06:55:28,626 - 172.18.0.2 - - [11/Jun/2025 06:55:28] "POST / HTTP/1.1" 200 -
+2025-06-11 07:00:31,868 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 07:00:31,869 - [33mPress CTRL+C to quit[0m
+2025-06-11 07:00:33,625 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:00:34,550 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:00:35,783 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:59:29.419Z'}
+2025-06-11 07:00:35,784 - 172.18.0.3 - - [11/Jun/2025 07:00:35] "POST / HTTP/1.1" 200 -
+2025-06-11 07:00:38,948 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T06:58:38.37Z'}
+2025-06-11 07:00:38,948 - 172.18.0.3 - - [11/Jun/2025 07:00:38] "POST / HTTP/1.1" 200 -
+2025-06-11 07:01:29,568 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:01:31,291 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:00:29.419Z'}
+2025-06-11 07:01:32,198 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:01:33,134 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:59:29.419Z'}
+2025-06-11 07:01:33,135 - 172.18.0.3 - - [11/Jun/2025 07:01:33] "POST / HTTP/1.1" 200 -
+2025-06-11 07:02:28,377 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 07:02:28,378 - [33mPress CTRL+C to quit[0m
+2025-06-11 07:03:27,973 - 172.18.0.1 - - [11/Jun/2025 07:03:27] "POST / HTTP/1.1" 200 -
+2025-06-11 07:04:29,480 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:04:31,089 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:00:29.419Z'}
+2025-06-11 07:04:32,535 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:58:29.419Z'}
+2025-06-11 07:04:34,164 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T06:59:29.419Z'}
+2025-06-11 07:04:34,164 - 172.18.0.3 - - [11/Jun/2025 07:04:34] "POST / HTTP/1.1" 200 -
+2025-06-11 07:06:13,828 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 07:06:13,829 - [33mPress CTRL+C to quit[0m
+2025-06-11 07:06:29,195 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:06:30,825 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:06:30,825 - 172.18.0.3 - - [11/Jun/2025 07:06:30] "POST / HTTP/1.1" 200 -
+2025-06-11 07:07:28,226 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:07:29,435 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:07:30,541 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:06:29.419Z'}
+2025-06-11 07:07:31,671 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:06:29.419Z'}
+2025-06-11 07:07:31,672 - 172.18.0.3 - - [11/Jun/2025 07:07:31] "POST / HTTP/1.1" 200 -
+2025-06-11 07:19:32,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 07:19:32,773 - [33mPress CTRL+C to quit[0m
+2025-06-11 07:21:25,220 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 07:21:25,229 - 172.18.0.3 - - [11/Jun/2025 07:21:25] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 07:21:26,521 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:21:27,860 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:21:29,506 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 07:21:29,508 - 172.18.0.3 - - [11/Jun/2025 07:21:29] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 07:21:31,160 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:21:33,080 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:05:29.419Z'}
+2025-06-11 07:21:34,306 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:06:29.419Z'}
+2025-06-11 07:21:35,944 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T07:06:29.419Z'}
+2025-06-11 07:21:35,945 - 172.18.0.3 - - [11/Jun/2025 07:21:35] "POST / HTTP/1.1" 200 -
+2025-06-11 19:56:47,848 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T06:58:38.37Z'}
+2025-06-11 19:56:47,864 - 172.18.0.3 - - [11/Jun/2025 19:56:47] "POST / HTTP/1.1" 200 -
+2025-06-11 19:59:26,163 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:27,697 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:28,130 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:28,135 - 172.18.0.3 - - [11/Jun/2025 19:59:28] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:29,923 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:31,718 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:33,545 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T19:58:38.37Z'}
+2025-06-11 19:59:33,546 - 172.18.0.3 - - [11/Jun/2025 19:59:33] "POST / HTTP/1.1" 200 -
+2025-06-11 19:59:33,651 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:33,654 - 172.18.0.3 - - [11/Jun/2025 19:59:33] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:35,603 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:37,535 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:37,537 - 172.18.0.3 - - [11/Jun/2025 19:59:37] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:38,956 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:40,255 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:43,905 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:43,907 - 172.18.0.3 - - [11/Jun/2025 19:59:43] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:45,485 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:47,124 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:53,950 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:53,952 - 172.18.0.3 - - [11/Jun/2025 19:59:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:55,735 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 19:59:55,737 - 172.18.0.3 - - [11/Jun/2025 19:59:55] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 19:59:57,803 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 19:59:59,229 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:00,614 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:01,889 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 20:00:01,891 - 172.18.0.3 - - [11/Jun/2025 20:00:01] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 20:00:03,133 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:05,280 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:06,521 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:08,122 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 20:00:08,124 - 172.18.0.3 - - [11/Jun/2025 20:00:08] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 20:00:09,236 - Exception on / [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1063, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1219, in read_chunked
+    self._update_chunk_length()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/response.py", line 1149, in _update_chunk_length
+    raise ProtocolError("Response ended prematurely") from None
+urllib3.exceptions.ProtocolError: Response ended prematurely
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/webhook_receiver.py", line 43, in alert
+    requests.get(DISCORD_WEBHOOK_URL, json=json.dumps(discord_message))
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 746, in send
+    r.content
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 902, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/usr/local/lib/python3.10/site-packages/requests/models.py", line 822, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: Response ended prematurely
+2025-06-11 20:00:09,238 - 172.18.0.3 - - [11/Jun/2025 20:00:09] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2025-06-11 20:00:16,740 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:17,943 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:20,011 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:21,745 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T19:58:29.419Z'}
+2025-06-11 20:00:21,746 - 172.18.0.3 - - [11/Jun/2025 20:00:21] "POST / HTTP/1.1" 200 -
+2025-06-11 21:09:10,487 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.4:9000
+2025-06-11 21:09:10,487 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:16:20,636 - Discord made message: 
+{'content': '**Alert:** HighRequestLatency\n**Instance:** flask-app:5000\n**Severity:** warning\n**Summary:** High Request Latency\n**Description:** None\n**Time Fired:** 2025-06-11T21:15:38.37Z'}
+2025-06-11 21:16:22,062 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T21:15:38.37Z'}
+2025-06-11 21:16:22,063 - 172.18.0.3 - - [11/Jun/2025 21:16:22] "POST / HTTP/1.1" 200 -
+2025-06-11 21:17:09,291 - Discord made message: 
+{'content': '**Alert:** ZeroRequestRate\n**Instance:** flask-app:5000\n**Severity:** warning\n**Summary:** No traffic to Flask App\n**Description:** Flask app has received no requests for the past minute.\n**Time Fired:** 2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:10,644 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:10,644 - Discord made message: 
+{'content': '**Alert:** ZeroRequestRate\n**Instance:** flask-app:5000\n**Severity:** warning\n**Summary:** No traffic to Flask App\n**Description:** Flask app has received no requests for the past minute.\n**Time Fired:** 2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:11,964 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:11,965 - Discord made message: 
+{'content': '**Alert:** ZeroRequestRate\n**Instance:** flask-app:5000\n**Severity:** warning\n**Summary:** No traffic to Flask App\n**Description:** Flask app has received no requests for the past minute.\n**Time Fired:** 2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:13,145 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:13,146 - Discord made message: 
+{'content': '**Alert:** ZeroRequestRate\n**Instance:** flask-app:5000\n**Severity:** warning\n**Summary:** No traffic to Flask App\n**Description:** Flask app has received no requests for the past minute.\n**Time Fired:** 2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:14,557 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:16:29.419Z'}
+2025-06-11 21:17:14,558 - 172.18.0.3 - - [11/Jun/2025 21:17:14] "POST / HTTP/1.1" 200 -
+2025-06-11 21:22:22,923 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:22:22,924 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:26:19,583 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:26:20,894 - <Response [400]>
+2025-06-11 21:26:20,894 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:25:29.419Z'}
+2025-06-11 21:26:20,895 - 172.18.0.4 - - [11/Jun/2025 21:26:20] "POST / HTTP/1.1" 200 -
+2025-06-11 21:26:28,531 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:26:29,872 - <Response [400]>
+2025-06-11 21:26:29,872 - 🚨 Webhook Alert Received:
+{'Alert': 'HighRequestLatency', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'High Request Latency', 'Description': None, 'Time Fired': '2025-06-11T21:25:38.37Z'}
+2025-06-11 21:26:29,873 - 172.18.0.4 - - [11/Jun/2025 21:26:29] "POST / HTTP/1.1" 200 -
+2025-06-11 21:27:17,064 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:27:18,780 - <Response [400]>
+2025-06-11 21:27:18,780 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:25:29.419Z'}
+2025-06-11 21:27:18,781 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:27:20,260 - <Response [400]>
+2025-06-11 21:27:20,260 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:27:20,261 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:27:21,756 - <Response [400]>
+2025-06-11 21:27:21,756 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:27:21,757 - 172.18.0.4 - - [11/Jun/2025 21:27:21] "POST / HTTP/1.1" 200 -
+2025-06-11 21:30:41,672 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:30:41,672 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:31:00,212 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:31:00,213 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:32:04,486 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:32:06,437 - <Response [204]>
+2025-06-11 21:32:06,437 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:25:29.419Z'}
+2025-06-11 21:32:06,438 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:32:08,574 - <Response [204]>
+2025-06-11 21:32:08,575 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:32:08,575 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:32:09,938 - <Response [204]>
+2025-06-11 21:32:09,939 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:32:09,940 - 172.18.0.4 - - [11/Jun/2025 21:32:09] "POST / HTTP/1.1" 200 -
+2025-06-11 21:33:59,432 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:34:01,091 - <Response [204]>
+2025-06-11 21:34:01,092 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:33:29.419Z'}
+2025-06-11 21:34:01,092 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:34:02,815 - <Response [204]>
+2025-06-11 21:34:02,815 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:34:02,816 - 172.18.0.4 - - [11/Jun/2025 21:34:02] "POST / HTTP/1.1" 200 -
+2025-06-11 21:34:56,889 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:34:58,545 - <Response [204]>
+2025-06-11 21:34:58,545 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:34:29.419Z'}
+2025-06-11 21:34:58,545 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:34:59,944 - <Response [204]>
+2025-06-11 21:34:59,944 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:33:29.419Z'}
+2025-06-11 21:34:59,945 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:35:01,591 - <Response [204]>
+2025-06-11 21:35:01,592 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:34:29.419Z'}
+2025-06-11 21:35:01,592 - Discord made message: 
+{"content": "Discord message triggered"}
+2025-06-11 21:35:03,472 - <Response [204]>
+2025-06-11 21:35:03,473 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:35:03,474 - 172.18.0.4 - - [11/Jun/2025 21:35:03] "POST / HTTP/1.1" 200 -
+2025-06-11 21:36:24,890 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:36:24,891 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:37:49,187 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:34:29.419Z"}}
+2025-06-11 21:37:50,465 - <Response [400]>
+2025-06-11 21:37:50,465 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:34:29.419Z'}
+2025-06-11 21:37:50,466 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:33:29.419Z"}}
+2025-06-11 21:37:51,647 - <Response [400]>
+2025-06-11 21:37:51,648 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:33:29.419Z'}
+2025-06-11 21:37:51,648 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:34:29.419Z"}}
+2025-06-11 21:37:53,060 - <Response [400]>
+2025-06-11 21:37:53,061 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:34:29.419Z'}
+2025-06-11 21:37:53,062 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:26:29.419Z"}}
+2025-06-11 21:37:54,623 - <Response [400]>
+2025-06-11 21:37:54,624 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:26:29.419Z'}
+2025-06-11 21:37:54,626 - 172.18.0.4 - - [11/Jun/2025 21:37:54] "POST / HTTP/1.1" 200 -
+2025-06-11 21:39:43,996 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:39:29.419Z"}}
+2025-06-11 21:39:45,240 - <Response [400]>
+2025-06-11 21:39:45,240 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:39:45,240 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:39:29.419Z"}}
+2025-06-11 21:39:46,599 - <Response [400]>
+2025-06-11 21:39:46,599 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:39:46,600 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:39:29.419Z"}}
+2025-06-11 21:39:47,715 - <Response [400]>
+2025-06-11 21:39:47,716 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:39:47,716 - Discord made message: 
+{"content": {"text": "\ud83d\udea8 *ZeroRequestRate* on *flask-app:5000*:\n- Severity: warning\n- Summary: No traffic to Flask App\n- Description: Flask app has received no requests for the past minute.\n- Time: 2025-06-11T21:39:29.419Z"}}
+2025-06-11 21:39:48,794 - <Response [400]>
+2025-06-11 21:39:48,794 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:39:48,795 - 172.18.0.4 - - [11/Jun/2025 21:39:48] "POST / HTTP/1.1" 200 -
+2025-06-11 21:46:19,076 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:46:19,077 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:48:20,498 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:48:22,365 - <Response [400]>
+2025-06-11 21:48:22,365 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:48:22,366 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:48:23,934 - <Response [400]>
+2025-06-11 21:48:23,935 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:48:23,935 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:48:25,296 - <Response [400]>
+2025-06-11 21:48:25,297 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:48:25,297 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:48:26,737 - <Response [400]>
+2025-06-11 21:48:26,738 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:39:29.419Z'}
+2025-06-11 21:48:26,739 - 172.18.0.4 - - [11/Jun/2025 21:48:26] "POST / HTTP/1.1" 200 -
+2025-06-11 21:50:15,161 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:50:16,405 - <Response [400]>
+2025-06-11 21:50:16,406 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:50:16,406 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:50:18,038 - <Response [400]>
+2025-06-11 21:50:18,039 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:50:18,039 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:50:19,248 - <Response [400]>
+2025-06-11 21:50:19,248 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:50:19,249 - Discord made message: 
+{"content": "Alert : {entriched_log['Alert']}"}
+2025-06-11 21:50:20,713 - <Response [400]>
+2025-06-11 21:50:20,714 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:50:20,714 - 172.18.0.4 - - [11/Jun/2025 21:50:20] "POST / HTTP/1.1" 200 -
+2025-06-11 21:55:40,617 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 21:55:40,617 - [33mPress CTRL+C to quit[0m
+2025-06-11 21:56:56,465 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:49:29.419Z"
+2025-06-11 21:56:57,767 - <Response [204]>
+2025-06-11 21:56:57,768 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:56:57,768 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:49:29.419Z"
+2025-06-11 21:56:59,053 - <Response [204]>
+2025-06-11 21:56:59,053 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:56:59,054 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:49:29.419Z"
+2025-06-11 21:57:00,682 - <Response [204]>
+2025-06-11 21:57:00,682 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:57:00,683 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:49:29.419Z"
+2025-06-11 21:57:02,223 - <Response [204]>
+2025-06-11 21:57:02,224 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:49:29.419Z'}
+2025-06-11 21:57:02,225 - 172.18.0.4 - - [11/Jun/2025 21:57:02] "POST / HTTP/1.1" 200 -
+2025-06-11 21:58:51,056 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:58:29.419Z"
+2025-06-11 21:58:53,164 - <Response [204]>
+2025-06-11 21:58:53,164 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 21:58:53,165 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:58:29.419Z"
+2025-06-11 21:58:54,480 - <Response [204]>
+2025-06-11 21:58:54,480 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 21:58:54,481 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:58:29.419Z"
+2025-06-11 21:58:55,815 - <Response [204]>
+2025-06-11 21:58:55,816 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 21:58:55,816 - Discord made message: 
+"\ud83d\udea8 Alert: ZeroRequestRate\n\ud83d\udda5 Instance: flask-app:5000\n\u26a0\ufe0f Severity: warning\n\ud83d\udcc4 Summary: No traffic to Flask App\n\ud83d\udd52 Time: 2025-06-11T21:58:29.419Z"
+2025-06-11 21:58:57,245 - <Response [204]>
+2025-06-11 21:58:57,246 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 21:58:57,247 - 172.18.0.4 - - [11/Jun/2025 21:58:57] "POST / HTTP/1.1" 200 -
+2025-06-11 22:00:10,534 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 22:00:10,534 - [33mPress CTRL+C to quit[0m
+2025-06-11 22:01:42,894 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T21:58:29.419Z"
+2025-06-11 22:01:44,659 - <Response [204]>
+2025-06-11 22:01:44,660 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 22:01:44,660 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T21:58:29.419Z"
+2025-06-11 22:01:45,860 - <Response [204]>
+2025-06-11 22:01:45,861 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 22:01:45,861 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T21:58:29.419Z"
+2025-06-11 22:01:47,313 - <Response [204]>
+2025-06-11 22:01:47,314 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 22:01:47,314 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T21:58:29.419Z"
+2025-06-11 22:01:49,099 - <Response [204]>
+2025-06-11 22:01:49,100 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T21:58:29.419Z'}
+2025-06-11 22:01:49,102 - 172.18.0.4 - - [11/Jun/2025 22:01:49] "POST / HTTP/1.1" 200 -
+2025-06-11 22:03:47,436 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:03:49,086 - <Response [204]>
+2025-06-11 22:03:49,086 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:03:49,087 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:03:50,469 - <Response [204]>
+2025-06-11 22:03:50,469 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:03:50,470 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:03:51,913 - <Response [204]>
+2025-06-11 22:03:51,914 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:03:51,914 - Discord made message: 
+"Discord Post Trigger:  Alert : ZeroRequestRate\n Instance : flask-app:5000\n Severity : warning\n Summary : No traffic to Flask App\n Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:03:52,089 - <Response [204]>
+2025-06-11 22:03:52,090 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:03:52,091 - 172.18.0.4 - - [11/Jun/2025 22:03:52] "POST / HTTP/1.1" 200 -
+2025-06-11 22:08:40,139 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.18.0.2:9000
+2025-06-11 22:08:40,139 - [33mPress CTRL+C to quit[0m
+2025-06-11 22:10:28,169 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:10:30,179 - <Response [204]>
+2025-06-11 22:10:30,180 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:10:30,180 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:10:31,976 - <Response [204]>
+2025-06-11 22:10:31,977 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:10:31,977 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:10:33,647 - <Response [204]>
+2025-06-11 22:10:33,648 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:10:33,649 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:03:29.419Z"
+2025-06-11 22:10:33,612 - <Response [204]>
+2025-06-11 22:10:33,613 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:03:29.419Z'}
+2025-06-11 22:10:33,615 - 172.18.0.4 - - [11/Jun/2025 22:10:33] "POST / HTTP/1.1" 200 -
+2025-06-11 22:12:12,586 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:11:29.419Z"
+2025-06-11 22:12:14,229 - <Response [204]>
+2025-06-11 22:12:14,229 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:11:29.419Z'}
+2025-06-11 22:12:14,230 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:11:29.419Z"
+2025-06-11 22:12:15,709 - <Response [204]>
+2025-06-11 22:12:15,710 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:11:29.419Z'}
+2025-06-11 22:12:15,711 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:11:29.419Z"
+2025-06-11 22:12:17,154 - <Response [204]>
+2025-06-11 22:12:17,154 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:11:29.419Z'}
+2025-06-11 22:12:17,155 - Discord made message: 
+"Discord Post Trigger: \n -  Alert : ZeroRequestRate\n - Instance : flask-app:5000\n - Severity : warning\n - Summary : No traffic to Flask App\n - Time : 2025-06-11T22:11:29.419Z"
+2025-06-11 22:12:18,554 - <Response [204]>
+2025-06-11 22:12:18,554 - 🚨 Webhook Alert Received:
+{'Alert': 'ZeroRequestRate', 'Instance': 'flask-app:5000', 'Severity': 'warning', 'Summary': 'No traffic to Flask App', 'Description': 'Flask app has received no requests for the past minute.', 'Time Fired': '2025-06-11T22:11:29.419Z'}
+2025-06-11 22:12:18,556 - 172.18.0.4 - - [11/Jun/2025 22:12:18] "POST / HTTP/1.1" 200 -
