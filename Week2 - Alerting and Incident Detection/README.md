@@ -2,107 +2,154 @@
 
 ## Overview
 
-This module extends the AIOps stack by adding real-time alerting capabilities using **Prometheus Alertmanager**, **Gmail SMTP**, and a Flask application. When certain conditions are met, alert notifications are sent via email.
+This module builds on the AIOps stack with **real-time alerting and incident handling** using:
+
+- **Prometheus Alertmanager** for rule-based alert generation  
+- **Gmail SMTP**, **Discord**, and **Microsoft Teams** for multi-channel notifications  
+- **Flask Webhook Receiver** to log and forward alerts  
+- **Loki + Promtail** for log-based alerting  
+- GitHub Actions-based config validation
 
 ---
 
 ## 📦 Components
 
-- `flask-app/` – Python Flask service exposing a `/health` endpoint.
-- `rules/alert-rules.yml` – Prometheus alerting rules for monitoring `request_count_total`.
-- `alertmanager/alertmanager.yml` – Configuration for Alertmanager using Gmail SMTP.
-- `docker-compose.yml` – Orchestrates the setup with Prometheus, Alertmanager, and Flask.
+| Directory/File                     | Description                                               |
+|-----------------------------------|-----------------------------------------------------------|
+| `alertmanager/config.yml`         | Alertmanager config for email, webhook, Discord, Teams   |
+| `rules/alert_rules.yml`           | Prometheus alert rules                                    |
+| `webhook/`                        | Flask receiver for webhook alerts                         |
+| `grafana/provisioning/`           | Dashboards and data sources pre-config                    |
+| `prometheus/prometheus.yml`       | Prometheus scrape targets and rule loading                |
+| `docker-compose.yml`              | Spins up all services                                     |
+| `assets/`                         | Alert screenshots and Grafana panels                      |
+| `validation-logs/`                | Text logs exported from alerts                            |
 
 ---
 
 ## 🛠️ Setup Instructions
 
-### 1. Navigate to Week 2 Directory
+### 1. Clone and Navigate
 
 ```bash
+git clone https://github.com/SamuelSudeepAyyala/AiOps.git
 cd "AiOps/Week2 - Alerting and Incident Detection"
 ```
 
-### 2. Create or Update environmental variable or .env file
+### 2. Create .env with Gmail credentials
 
 ```bash
-EMAIL_ADDRESS=your.email@gmail.com
-EMAIL_PASSWORD=your_app_password
+EMAIL_USERNAME=********@gmail.com
+EMAIL_PASSWORD=app_password
+EMAIL_RECEIVER=recipient@gmail.com
 ```
-always use an App Password generated via your Gmail security settings.
+
+#### For webhook integrations (used inside webhook_receiver.py):
+
+```
+DISCORD_WEBHOOK_URL=discord_url
+TEAMS_WEBHOOK_URL=teams_url
+```
 
 ### 3. Run the Stack
-```bash
+```
 docker-compose up --build
 ```
-This spins up:
+## 🔍 Endpoints
 
- - Flask server
+| Service        | URL                                            |
+| -------------- | ---------------------------------------------- |
+| Flask App      | [http://localhost:5000](http://localhost:5000) |
+| Prometheus     | [http://localhost:9090](http://localhost:9090) |
+| Alertmanager   | [http://localhost:9093](http://localhost:9093) |
+| Grafana        | [http://localhost:3000](http://localhost:3000) |
+| Webhook Viewer | [http://localhost:9000](http://localhost:9000) |
 
- - Prometheus (reading custom rules)
+## 🔔 Alerting Rules
 
- - Alertmanager (configured with Gmail SMTP)
+#### We defined multiple groups of alerts:
 
- ## 🔍 Endpoints
-
-
-| Service      | URL                                                          |
-| ------------ | ------------------------------------------------------------ |
-| Flask Health | [http://localhost:5000/health](http://localhost:5000/health) |
-| Prometheus   | [http://localhost:9090](http://localhost:9090)               |
-| Alertmanager | [http://localhost:9093](http://localhost:9093)               |
+1. flask-app-alerts
+2. system-resource-alerts
+3. prometheus-health-alerts
+4. flask-app-metrics-alerts
+5. loki-log-rules
 
 
-## 🔔 Alerting Workflow
-1. Rule Condition (from rules/alert-rules.yml):
-```yaml
-- alert: HighRequestRate
-  expr: increase(request_count_total[30s]) > 2
-  for: 10s
-  labels:
-    severity: critical
-  annotations:
-    summary: High Request Rate Detected
-    description: More than 2 requests in 30s
-```
-you can use whatever rule you want based on the parameter you want to track.
+## 📧 Multi-Channel Notifications
 
-2. Prometheus loads this rule at startup.
+Alertmanager now sends alerts to:
 
-3. When triggered, Prometheus sends an alert to Alertmanager.
+ - Gmail ✅
 
-4. Alertmanager emails the alert to the configured Gmail address.
+ - Webhook Flask App ✅
 
-## 📧 Email Output 
-You should receive an email like this:
+ - Microsoft Teams ✅
 
-[FIRING:1] High Request Rate Detected
-More than 2 requests in 30s
-Source: http://localhost:5000/health
-Severity: Critical
+ - Discord ✅
 
-## ✅ Current Status
-  - Alert rules defined and loaded successfully in Prometheus.
+Webhook receiver enriches and logs alerts.
 
-  - Flask app instrumented with request_count_total.
+📂 alerts_log.txt, webhook_logs.txt, and flask_logs.txt are exported for audit purposes.
 
-  - Alertmanager configured with Gmail SMTP.
+## 🧪 GitHub CI Validations (auto)
+- ✅ Docker Compose syntax check
 
-  - Triggered real-time email alerts and verified delivery.
+- ✅ YAML linting
 
-  - Dockerized and modular project structure.
+- ✅ Prometheus rules validation (promtool)
 
-## 📸 Dashboard & Alert Screenshots
+- ✅ Python syntax check for Flask & Webhook
 
-### Prometheus Rule Firing
-#### Rate Query Results
-![Query results image](assets/rate_query.png)
+- ✅ Grafana provisioning config check
 
+- ✅ Alertmanager config validation
+
+## 🖼️ Visual Output & Dashboards
+🔄 Simulated High Latency Endpoint
+
+/simulate-high-latency triggers latency-based alerts.
+
+#### 📊 Prometheus Alerts
 #### Prometheus alert pending status
 ![Prometheus Rule Pending](assets/pending_status.png)
 
 #### Prometheus alert firing status
 ![Prometheus Rule Firing](assets/Firing_status.png)
 
+
+
+## 🧾 Webhook Logs
+
+![Webhook_logs_png](./assets/webhook_logs.png)
+
+## 📩 Email Evidence
+
 #### Email Alert Received  
 ![Email_Alert](./assets/alert_email_image.png)
+
+## 📥 Teams & Discord Alerts
+
+#### Teams Alert
+![Teams_Alert](./assets/teams_alert_evidence.png)
+
+#### Discord Alert
+![Discord_Alert](./assets/discord_alert_evidence.png)
+
+## 📈 Dashboards
+
+### Loki Logs Alerting Dashboard
+
+![Loki-Logs-Alert](./assets/Loki-logs-prometheus-status.png)
+
+## ✅ Status Summary
+- 🔔 Real-time alerting via multiple channels
+
+- 🌐 Webhook integration with alert enrichment
+
+- 📄 Centralized log export for alerts
+
+- 📊 Grafana dashboards for metrics & logs
+
+- 🧪 CI Validations to prevent config issues
+
