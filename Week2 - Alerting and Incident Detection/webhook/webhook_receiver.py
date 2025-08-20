@@ -2,11 +2,14 @@ from flask import Flask, json, request, jsonify
 import logging
 from datetime import datetime
 import requests,os
+from dateutil.parser import parse
+
 
 app = Flask(__name__)
 logging.basicConfig(filename="alerts_log.txt", level=logging.INFO, format="%(asctime)s - %(message)s")
 TEAMS_WEBHOOK_URL = os.getenv("TEAMS_WEBHOOK_URL")
 DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
+
 
 @app.route('/', methods=['POST'])
 def alert():
@@ -17,7 +20,7 @@ def alert():
         labels = alert.get("labels", {})
         annotations = alert.get("annotations", {})
         start_time = alert.get("startsAt", "")
-        time_fired = datetime.fromisoformat(start_time.replace("Z", "+00:00")).strftime("%Y-%m-%d %H:%M:%S UTC")
+        time_fired = parse(start_time).strftime("%Y-%m-%d %H:%M:%S UTC")
         
         #Default values
         summary = annotations.get("summary", "No summary")
