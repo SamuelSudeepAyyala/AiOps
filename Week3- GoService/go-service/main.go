@@ -21,7 +21,7 @@ func writeJSON(w http.ResponseWriter, status int, payload any) {
 }
 
 func healthHandler (w http.ResponseWriter, r *http.Request){
-	writeJSON(w,http.StatusOK,map[string]string{"Status":"ok"})
+	writeJSON(w,http.StatusOK,map[string]string{"status":"ok"})
 }
 
 func PingHandler (w http.ResponseWriter, r *http.Request){
