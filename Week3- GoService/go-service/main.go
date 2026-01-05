@@ -1,17 +1,42 @@
 package main
 
-import ( 
-	"encoding/json" 
-	"log" 
+import (
+	"encoding/json"
+	"log"
 	"net/http"
 	"time"
 
+	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
-type PingResponse struct{
+type PingResponse struct {
 	Message string `json:"message"`
-	Time string `json:"time"`
+	Time    string `json:"time"`
+}
+
+var (
+	httpRequestsTotal = prometheus.NewCounterVec(
+		prometheus.CounterOpts{
+			Name: "http_requests_total",
+			Help: "Total number of HTTP requests processed.",
+		},
+		[]string{"method", "path", "status"},
+	)
+
+	httpRequestsDurationSeconds = prometheus.NewHistogramVec(
+		prometheus.HistogramOpts{
+			Name:    "http_request_duration_seconds",
+			Help:    "HTTP request duration in seconds.",
+			Buckets: prometheus.DefBuckets,
+		},
+		[]string{"method", "path"},
+	)
+)
+
+func init() {
+	prometheus.MustRegister(httpRequestsTotal)
+	prometheus.MustRegister(httpRequestsDurationSeconds)
 }
 
 func writeJSON(w http.ResponseWriter, status int, payload any) {
@@ -20,20 +45,20 @@ func writeJSON(w http.ResponseWriter, status int, payload any) {
 	_ = json.NewEncoder(w).Encode(payload)
 }
 
-func healthHandler (w http.ResponseWriter, r *http.Request){
-	writeJSON(w,http.StatusOK,map[string]string{"status":"ok"})
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	writeJSON(w, http.StatusOK, map[string]string{"status": "ok"})
 }
 
-func PingHandler (w http.ResponseWriter, r *http.Request){
+func PingHandler(w http.ResponseWriter, r *http.Request) {
 	response := PingResponse{
 		Message: "Recived Ping",
-		Time: time.Now().Format(time.RFC3339),
+		Time:    time.Now().Format(time.RFC3339),
 	}
-	writeJSON(w, http.StatusOK ,response)
+	writeJSON(w, http.StatusOK, response)
 }
 
-func loggingMiddleware(next http.Handler) http.Handler{
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request){
+func metricsAndLoggingMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
 		start := time.Now()
 
@@ -41,11 +66,16 @@ func loggingMiddleware(next http.Handler) http.Handler{
 		next.ServeHTTP(lrw, r)
 
 		duration := time.Since(start)
-		log.Printf("method=%s path=%s status=%d duration_ms=%d",r.Method, r.URL.Path, lrw.statusCode, duration.Milliseconds())
+		path := r.URL.Path
+
+		httpRequestsTotal.WithLabelValues(r.Method, path, http.StatusText(lrw.statusCode)).Inc()
+		httpRequestsDurationSeconds.WithLabelValues(r.Method, path).Observe(duration.Seconds())
+
+		log.Printf("method=%s path=%s status=%d duration_ms=%d", r.Method, r.URL.Path, lrw.statusCode, duration.Milliseconds())
 	})
 }
 
-type loggingResponseWriter struct{
+type loggingResponseWriter struct {
 	http.ResponseWriter
 	statusCode int
 }
@@ -55,7 +85,7 @@ func (lrw *loggingResponseWriter) WriteHeader(code int) {
 	lrw.ResponseWriter.WriteHeader(code)
 }
 
-func main(){
+func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/healthz", healthHandler)
 	mux.HandleFunc("/ping", PingHandler)
@@ -65,8 +95,8 @@ func main(){
 	addr := ":8080"
 	log.Println("Starting Server on the address", addr)
 
-	handler := loggingMiddleware(mux)
-	
+	handler := metricsAndLoggingMiddleware(mux)
+
 	srv := &http.Server{
 		Addr:         addr,
 		Handler:      handler,
@@ -76,7 +106,7 @@ func main(){
 	}
 
 	err := srv.ListenAndServe()
-	if err!= nil{
+	if err != nil {
 		log.Fatal(err)
 	}
 }
