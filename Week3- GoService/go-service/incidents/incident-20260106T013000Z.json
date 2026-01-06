@@ -1,0 +1,14 @@
+{
+  "status": "firing",
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "TestAlert",
+        "severity": "test"
+      },
+      "annotations": {
+        "summary": "hello"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "receiver": "webhook-receiver",
+  "status": "firing",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertname": "GoServiceDown",
+        "instance": "go-service:8080",
+        "job": "go-service",
+        "severity": "critical"
+      },
+      "annotations": {
+        "description": "go-service has been unreachable for 30 seconds",
+        "summary": "Go service is down"
+      },
+      "startsAt": "2026-01-06T01:35:37.091Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "http://3210b5093007:9090/graph?g0.expr=up%7Bjob%3D%22go-service%22%7D+%3D%3D+0&g0.tab=1",
+      "fingerprint": "e4e6940a3297856b"
+    }
+  ],
+  "groupLabels": {
+    "alertname": "GoServiceDown",
+    "job": "go-service"
+  },
+  "commonLabels": {
+    "alertname": "GoServiceDown",
+    "instance": "go-service:8080",
+    "job": "go-service",
+    "severity": "critical"
+  },
+  "commonAnnotations": {
+    "description": "go-service has been unreachable for 30 seconds",
+    "summary": "Go service is down"
+  },
+  "externalURL": "http://d70ded48c10a:9093",
+  "version": "4",
+  "groupKey": "{}:{alertname=\"GoServiceDown\", job=\"go-service\"}",
+  "truncatedAlerts": 0
+}
