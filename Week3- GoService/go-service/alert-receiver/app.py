@@ -1,36 +1,21 @@
 from flask import Flask, request, jsonify
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import json
 import os
-import subprocess
 import requests
-import requests_unixsocket
 
 app = Flask(__name__)
 
-INCIDENT_DIR = os.environ.get("INCIDENT_DIR", " ./incidents")
+INCIDENT_DIR = os.environ.get("INCIDENT_DIR", "incidents")
 PROM_URL = os.environ.get("PROM_URL", "http://prometheus:9090")
-TARGET_CONTAINER = os.environ.get("TARGET_CONTAINER", "go-service")
+LOKI_URL = os.environ.get("LOKI_URL", "http://loki:3100")
+
+LOKI_QUERY = os.environ.get("LOKI_QUERY", '{compose_service="go-service"}')
 
 os.makedirs(INCIDENT_DIR, exist_ok=True)
 
 def utc_stamp():
     return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-
-def docker_logs_tail(container_name: str, lines: int=100) -> str:
-    try:
-        session = requests_unixsocket.Session()
-        # Docker socket base URL must be URL-encoded:
-        base = "http+unix://%2Fvar%2Frun%2Fdocker.sock"
-        url = f"{base}/containers/{container_name}/logs"
-        params = {"stdout": 1, "stderr": 1, "tail": lines}
-        r = session.get(url, params=params, timeout=3)
-        r.raise_for_status()
-        text = r.text.strip()
-        return text if text else "[no_logs]"
-    except Exception as e:
-        return f"[log_error] {e}"
-
 
 def prom_query(query:str):
     try:
@@ -40,13 +25,39 @@ def prom_query(query:str):
     except Exception as e :
         return {"error": str(e), "query": query}
 
-def build_enrichment():
+def build_metrics_snapshot():
     snapshots = {
         "up_go_service" : prom_query('up{job="go-service"}'),
         "req_rate_by_path" : prom_query('sum by (path) (rate(http_requests_total[1m]))'),
         "p95_latency_by_path": prom_query('histogram_quantile(0.95, sum by (le, path) (rate(http_request_duration_seconds_bucket[5m])))'),
     }
     return snapshots
+
+def loki_logs_last_minutes(minutes: int = 5, limit: int = 200) -> str:
+    try:
+        end = datetime.now(timezone.utc)
+        start = end - timedelta(minutes=minutes)
+
+        params = {
+            "query": LOKI_QUERY,
+            "start": int(start.timestamp() * 1_000_000_000),  # ns
+            "end": int(end.timestamp() * 1_000_000_000),      # ns
+            "limit": limit,
+            "direction": "forward",
+        }
+        r = requests.get(f"{LOKI_URL}/loki/api/v1/query_range", params=params, timeout=5)
+        r.raise_for_status()
+        data = r.json()
+
+        result = data.get("data", {}).get("result", [])
+        lines = []
+        for stream in result:
+            for ts, line in stream.get("values", []):
+                lines.append(line)
+
+        return "\n".join(lines[-limit:]) if lines else "[no_loki_logs]"
+    except Exception as e:
+        return f"[loki_error] {e}"
 
 @app.post("/alert")
 def alert():
@@ -57,17 +68,17 @@ def alert():
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
     
-    logs = docker_logs_tail(TARGET_CONTAINER, lines=120)
-    prom = build_enrichment()
-    
     enriched_log = {
         "timestamp_utc": ts,
         "alertmanager_status": payload.get("status"),
         "alerts": payload.get("alerts", []),
         "enrichment": {
-            "target_container": TARGET_CONTAINER,
-            "container_logs_tail": logs,
-            "prometheus_snapshots": prom,
+            "loki": {
+                "url": LOKI_URL,
+                "query": LOKI_QUERY,
+                "logs_last_5m": loki_logs_last_minutes(minutes=5, limit=200),
+            },
+            "prometheus_snapshots": build_metrics_snapshot(),
         },
         "raw_alertmanager_payload": payload,
     }

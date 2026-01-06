@@ -4,6 +4,10 @@ services:
     container_name: go-service
     ports:
       - "8080:8080"
+    volumes:
+      - ./shared-logs:/shared-logs
+    environment:
+      - LOG_FILE=/shared-logs/go-service.log
   
   prometheus:
     image: prom/prometheus:latest
@@ -46,8 +50,34 @@ services:
       - "5001:5001"
     volumes:
       - ./incidents:/incidents
+      - ./shared-logs:/shared-logs
     environment:
       - INCIDENT_DIR=/incidents
       - /var/run/docker.sock:/var/run/docker.sock
+      - LOKI_URL=http://loki:3100
       - FLASK_APP=app.py
     command: ["flask", "run", "--host=0.0.0.0", "--port=5001"]
+
+  loki:
+    image: grafana/loki:2.9.8
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./observability/loki/loki-config.yml:/etc/loki/config.yml:ro
+      - loki-data:/loki
+    command: -config.file=/etc/loki/config.yml
+
+  promtail:
+    image: grafana/promtail:2.9.8
+    container_name: promtail
+    volumes:
+      - ./observability/promtail/promtail-config.yml:/etc/promtail/config.yml:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+
+volumes:
+  loki-data:
+

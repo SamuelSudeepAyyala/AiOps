@@ -2,8 +2,10 @@ package main
 
 import (
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -85,7 +87,28 @@ func (lrw *loggingResponseWriter) WriteHeader(code int) {
 	lrw.ResponseWriter.WriteHeader(code)
 }
 
+func setupLogging() {
+	logFile := os.Getenv("LOG_FILE")
+	if logFile == "" {
+		log.SetOutput(os.Stdout)
+		return
+	}
+
+	_ = os.Mkdir("/shared-logs", 0755)
+
+	f, err := os.OpenFile(logFile, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Printf("failed to open log file: %v", err)
+		log.SetOutput(os.Stdout)
+		return
+	}
+
+	log.SetOutput(io.MultiWriter(os.Stdout, f))
+}
+
 func main() {
+	setupLogging()
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/healthz", healthHandler)
 	mux.HandleFunc("/ping", PingHandler)
