@@ -50,6 +50,10 @@ logs/
 
 incidents/*.json
 
+# Incident & runtime artifacts
+incidents/
+incidents - old/
+
 # Provisioned Dashboards/Temp
 grafana/data/
 grafana/provisioning/dashboards/*.tmp.json
