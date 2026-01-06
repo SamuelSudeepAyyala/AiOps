@@ -1,0 +1,11 @@
+groups:
+  - name: go-service-alerts
+    rules:
+      - alert: GoServiceDown
+        expr: up{job="go-service"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Go service is down"
+          description: "go-service has been unreachable for 30 seconds"
