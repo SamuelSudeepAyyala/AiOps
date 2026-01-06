@@ -48,6 +48,8 @@ index/
 boltdb-cache/
 logs/
 
+incidents/*.json
+
 # Provisioned Dashboards/Temp
 grafana/data/
 grafana/provisioning/dashboards/*.tmp.json
